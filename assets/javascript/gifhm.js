@@ -14,9 +14,8 @@ function createButtons() {
 	$("#createshowButtons").append(newBtn);
 }
 };
-$('#submitBtn').on('click', function(event) {
-    submitInput();
-});
+
+
 
 function submitInput(){
 
@@ -34,6 +33,9 @@ event.preventDefault();
             
 
 };
+$('#submitBtn').on('click', function(event) {
+    submitInput();
+});
 
 function displaySciFiShow() {
 
@@ -75,6 +77,8 @@ $(document).ready(function() {
 	createButtons();
 
 });
+
 displaySciFiShow();
+
 
 	 
