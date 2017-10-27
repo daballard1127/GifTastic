@@ -38,7 +38,7 @@ event.preventDefault();
 function displaySciFiShow() {
 
 
-	var scifiMovie = $(this).data('mymovie');
+	var scifiMovie = $(this).data('scimovie');
 	console.log($(this));
 	console.log(scifiMovie);
 
