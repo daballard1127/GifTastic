@@ -9,6 +9,8 @@ function createButtons() {
 		console.log(topics[i]);
 	
 	var newBtn = $(`<button ${topics[i].newBtn}></button>`);
+	// $("<button>");
+	
 	newBtn.attr("data-scifimovie", topics[i]);
 	newBtn.text(topics[i]);
 	$("#createshowButtons").append(newBtn);
@@ -78,7 +80,7 @@ $(document).ready(function() {
 
 });
 
-displaySciFiShow();
+$("#createshowButtons").on('click',displaySciFiShow);
 
 
 	 
