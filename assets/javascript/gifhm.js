@@ -38,10 +38,11 @@ event.preventDefault();
 function displaySciFiShow() {
 
 
-	var scifiMovie = $(this).data("scifimovie");
+	var scifiMovie = $(this).data('mymovie');
+	console.log($(this));
 	console.log(scifiMovie);
 
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + scifiMovie + "&api_key=dc6zaTOxFJmzC&limit=10";
+	var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + scifiMovie + '&api_key=dc6zaTOxFJmzC&limit=10';
 
 	console.log(queryURL);
 
@@ -74,6 +75,6 @@ $(document).ready(function() {
 	createButtons();
 
 });
-
 displaySciFiShow();
+
 	 
