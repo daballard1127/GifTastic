@@ -1,5 +1,6 @@
 //Array for searched topics to be added
 var topics = ["Dune", "Alien", "Star Wars", "The Matrix", "Metropolis", "Interstellar", "Inception", "Avatar", "Close Encounters", "District 9"];
+
 // Initial array that contains list of scifi movies
 //Function with AJAX call to GIPHY; Q parameterc for API link set to search term, limit 10 results
 //Create div with respective still and animate image sources with "data-state", "data-still" and "data-animate" attributes
@@ -13,10 +14,15 @@ function createButtons() {
 	
 	
 	newBtn.data("data-scifimovie",topics[i]);
+	newBtn.addClass("button");
 	newBtn.text(topics[i]);
+
 	$("#createshowButtons").append(newBtn);
+
 }
+topics=[];
 };
+
 
 
 
@@ -43,7 +49,7 @@ $('#submitBtn').on('click', function(event) {
 function displaySciFiShow() {
 
 
-	var scifiMovie = $(this).data();
+	var scifiMovie = $(this).data("data-scifimovie");
 	console.log($(this));
 	console.log(scifiMovie);
 
@@ -81,7 +87,7 @@ $(document).ready(function() {
 
 });
 
-$("#createshowButtons").on('click',displaySciFiShow);
+$("#createshowButtons").on('click','.button', displaySciFiShow);
 
 
 	 
