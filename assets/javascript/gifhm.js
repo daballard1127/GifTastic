@@ -8,10 +8,11 @@ function createButtons() {
 	for (var i = 0; i < topics.length; i++){
 		console.log(topics[i]);
 	
-	var newBtn = $(`<button ${topics[i].newBtn}></button>`);
-	// $("<button>");
+	var newBtn = $("<button>");
+	// $(`<button ${topics[i].newBtn}></button>`);
 	
-	newBtn.attr("data-scifimovie", topics[i]);
+	
+	newBtn.data("data-scifimovie",topics[i]);
 	newBtn.text(topics[i]);
 	$("#createshowButtons").append(newBtn);
 }
@@ -42,7 +43,7 @@ $('#submitBtn').on('click', function(event) {
 function displaySciFiShow() {
 
 
-	var scifiMovie = $(this).data('scimovie');
+	var scifiMovie = $(this).data();
 	console.log($(this));
 	console.log(scifiMovie);
 
